@@ -1,0 +1,15 @@
+/* Visualizer container styles */
+.visualizer-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: 1; /* Ensure proper layering */
+}
+
+/* Fix for header overlap on mobile */
+@media (max-width: 768px) {
+  .visualizer-container {
+    margin-top: 0;
+    padding-top: 0;
+  }
+}

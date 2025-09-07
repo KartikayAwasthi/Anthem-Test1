@@ -1,0 +1,32 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Caveat+Brush&display=swap');
+
+@theme {
+  --font-caveat: 'Caveat Brush', cursive;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Caveat+Brush&family=Pacifico&display=swap');
+
+@theme {
+  --font-pacifico: 'Pacifico', cursive;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@theme {
+  --font-pacifico: 'Pacifico', cursive;
+}
+
+@keyframes gradient-move {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+
+
+
+@import "tailwindcss";

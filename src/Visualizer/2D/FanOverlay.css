@@ -1,0 +1,528 @@
+/* Modern Visualization Interface */
+.fan-overlay-container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, #0f0f12, #1a1a24);
+  font-family: 'Poppins', 'Roboto', 'Segoe UI', sans-serif;
+  color-scheme: dark;
+}
+
+/* Room styling */
+.room-wrapper {
+  flex: 1;
+  height: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.room-full {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  filter: brightness(1.05) contrast(1.05); /* Enhance room visibility */
+}
+
+/* Fan image styling */
+.fan-image {
+  position: absolute;
+  pointer-events: none;
+  z-index: 5;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  filter: drop-shadow(0 10px 20px rgba(0,0,0,0.6));
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+  will-change: transform;
+  object-fit: contain;
+  max-height: 45vh;
+  image-rendering: auto; /* Let browser determine best quality */
+  -webkit-filter: contrast(1.05) saturate(1.05); /* Slight enhancement for clarity */
+  filter: contrast(1.05) saturate(1.05);
+}
+
+/* Modern controls panel */
+.modern-controls {
+  position: fixed;
+  top: 0;
+  right: -400px; /* Start off-screen */
+  width: 360px;
+  height: 100vh;
+  background: rgba(10, 10, 18, 0.85);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  box-shadow: -5px 0 30px rgba(0, 0, 0, 0.6);
+  z-index: 100;
+  transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  flex-direction: column;
+  color: #f5f5f5;
+  overflow-y: auto;
+  border-left: 1px solid rgba(100, 180, 255, 0.1);
+  scrollbar-width: thin;
+  scrollbar-color: rgba(100, 180, 255, 0.3) transparent;
+}
+
+.modern-controls::-webkit-scrollbar {
+  width: 5px;
+}
+
+.modern-controls::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.modern-controls::-webkit-scrollbar-thumb {
+  background-color: rgba(100, 180, 255, 0.3);
+  border-radius: 10px;
+}
+
+.modern-controls.open {
+  right: 0;
+}
+
+.controls-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 20px;
+  border-bottom: 1px solid rgba(100, 180, 255, 0.15);
+  background: rgba(15, 15, 30, 0.6);
+}
+
+.controls-header h2 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 500;
+  color: #f5f5f5;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.close-btn {
+  background: rgba(100, 180, 255, 0.1);
+  border: none;
+  color: #f5f5f5;
+  font-size: 22px;
+  cursor: pointer;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: all 0.2s;
+}
+
+.close-btn:hover {
+  background: rgba(100, 180, 255, 0.25);
+  transform: rotate(90deg);
+}
+
+.controls-section {
+  padding: 24px 20px;
+  border-bottom: 1px solid rgba(100, 180, 255, 0.15);
+  position: relative;
+}
+
+.controls-section::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 24px;
+  width: 3px;
+  height: 20px;
+  background: linear-gradient(to bottom, #3a7bd5, #00d2ff);
+  border-radius: 0 3px 3px 0;
+}
+
+.controls-section h3 {
+  margin: 0 0 18px 8px;
+  font-size: 15px;
+  font-weight: 500;
+  color: rgba(100, 180, 255, 0.9);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.model-selector, .color-selector, .room-selector {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.model-selector button, .color-selector button, .room-selector button {
+  padding: 12px 16px;
+  border-radius: 8px;
+  border: 1px solid rgba(100, 180, 255, 0.2);
+  background: rgba(15, 25, 50, 0.3);
+  color: #f5f5f5;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.model-selector button::after, .color-selector button::after, .room-selector button::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(to right, transparent, rgba(100, 180, 255, 0.5), transparent);
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+}
+
+.model-selector button:hover, .color-selector button:hover, .room-selector button:hover {
+  background: rgba(30, 40, 80, 0.4);
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 100, 255, 0.15);
+}
+
+.model-selector button:hover::after, .color-selector button:hover::after, .room-selector button:hover::after {
+  transform: translateX(0);
+}
+
+.model-selector button.active, .color-selector button.active, .room-selector button.active {
+  background: linear-gradient(135deg, #0b4da3, #00aeff);
+  border-color: rgba(100, 200, 255, 0.4);
+  box-shadow: 0 5px 20px rgba(0, 150, 255, 0.3), inset 0 0 10px rgba(255, 255, 255, 0.2);
+  color: white;
+  transform: translateY(-2px);
+}
+
+/* Floating action buttons */
+.floating-actions {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  z-index: 90;
+}
+
+.fab {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: rgba(20, 30, 50, 0.75);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(100, 180, 255, 0.2);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3), inset 0 0 20px rgba(100, 180, 255, 0.1);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.fab::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(to right, transparent, rgba(100, 180, 255, 0.5), transparent);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.fab:hover {
+  transform: scale(1.1) translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 100, 255, 0.25), inset 0 0 25px rgba(100, 180, 255, 0.2);
+  border-color: rgba(100, 180, 255, 0.4);
+}
+
+.fab:hover::before {
+  opacity: 1;
+}
+
+.fab.primary {
+  background: linear-gradient(135deg, #0a4b9e, #00a0f0);
+  box-shadow: 0 5px 15px rgba(0, 120, 255, 0.3), inset 0 0 10px rgba(255, 255, 255, 0.2);
+}
+
+.fab.primary:hover {
+  background: linear-gradient(135deg, #0c55b5, #00b0ff);
+  box-shadow: 0 8px 25px rgba(0, 140, 255, 0.4), inset 0 0 15px rgba(255, 255, 255, 0.3);
+}
+
+.fab-icon {
+  font-size: 24px;
+  color: #ffffff;
+  text-shadow: 0 0 10px rgba(100, 180, 255, 0.5);
+}
+
+/* Selection info display */
+.selection-info {
+  position: fixed;
+  left: 30px;
+  bottom: 30px;
+  background: rgba(15, 25, 45, 0.75);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  padding: 15px 20px;
+  border-radius: 15px;
+  color: white;
+  z-index: 80;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(100, 180, 255, 0.2);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transform: translateY(0);
+  max-width: 250px;
+}
+
+.selection-info:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 100, 255, 0.2);
+  border-color: rgba(100, 180, 255, 0.4);
+}
+
+.selection-info::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(to right, transparent, rgba(100, 180, 255, 0.7), transparent);
+  border-radius: 2px 2px 0 0;
+}
+
+.info-content {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.model-name {
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  color: #ffffff;
+  position: relative;
+  display: inline-block;
+}
+
+.model-name::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 40px;
+  height: 2px;
+  background: linear-gradient(to right, rgba(100, 180, 255, 0.8), transparent);
+}
+
+.color-name {
+  font-size: 14px;
+  color: rgba(180, 210, 255, 0.9);
+  letter-spacing: 0.5px;
+}
+
+/* Mobile responsive styles */
+@media (max-width: 768px) {
+  .modern-controls {
+    width: 100%;
+    right: -100%;
+    border-left: none;
+    border-top: 1px solid rgba(100, 180, 255, 0.2);
+  }
+  
+  .controls-header {
+    padding: 20px 15px;
+  }
+  
+  .controls-section {
+    padding: 20px 15px;
+  }
+  
+  .model-selector button, .color-selector button, .room-selector button {
+    padding: 10px 14px;
+    font-size: 13px;
+  }
+  
+  .floating-actions {
+    bottom: 20px;
+    right: 20px;
+    flex-direction: row;
+    gap: 15px;
+  }
+  
+  .fab {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .selection-info {
+    left: 20px;
+    bottom: 20px;
+    padding: 10px 15px;
+  }
+  
+  .fan-image {
+    max-width: 55% !important;
+    max-height: 40vh !important;
+    transform: translate(-50%, -50%) perspective(800px) rotateX(15deg) !important;
+    top: 15% !important;
+    filter: contrast(1.1) drop-shadow(0 8px 20px rgba(0,0,0,0.5)) !important;
+  }
+}
+
+/* Small mobile devices */
+@media (max-width: 480px) {
+  .controls-section {
+    padding: 18px 12px;
+  }
+  
+  .controls-section h3 {
+    font-size: 14px;
+    margin-bottom: 15px;
+  }
+  
+  .model-selector, .color-selector, .room-selector {
+    gap: 8px;
+  }
+  
+  .model-selector button, .color-selector button, .room-selector button {
+    padding: 8px 12px;
+    font-size: 12px;
+    flex: 1 0 calc(33.333% - 8px);
+    text-align: center;
+    min-width: 0;
+  }
+  
+  .floating-actions {
+    bottom: 15px;
+    right: 15px;
+    gap: 10px;
+  }
+  
+  .fab {
+    width: 48px;
+    height: 48px;
+  }
+  
+  .fab-icon {
+    font-size: 20px;
+  }
+  
+  .selection-info {
+    left: 15px;
+    bottom: 15px;
+    padding: 10px 12px;
+    max-width: 180px;
+  }
+  
+  .fan-image {
+    max-width: 65% !important;
+    max-height: 35vh !important;
+  }
+}
+
+/* Remove old mobile styles */
+@media (max-width: 768px) {
+  .fan-overlay-container {
+    flex-direction: column;
+    height: auto;
+    min-height: 100vh;
+  }
+  
+  .side-panel {
+    position: fixed;
+    width: 100%;
+    max-width: 100%;
+    border-radius: 0;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.9);
+    z-index: 30;
+  }
+  
+  .mobile-left-panel {
+    top: 0;
+    left: 0;
+    transform: none;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+  }
+  
+  .mobile-right-panel {
+    bottom: 0;
+    left: 0;
+    top: auto;
+    right: auto;
+    transform: none;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+  }
+  
+  .side-panel h3 {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 8px;
+    font-size: 14px;
+  }
+  
+  .button-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 6px;
+  }
+  
+  .side-panel button {
+    flex: 0 0 auto;
+    margin: 2px;
+    padding: 6px 8px;
+    font-size: 12px;
+  }
+  
+  .room-toggle {
+    width: 100%;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 10px;
+    gap: 10px;
+  }
+  
+  .room-btn {
+    margin: 0 5px;
+    padding: 6px 12px;
+  }
+  
+  .room-switcher-btn {
+    top: 10px;
+    padding: 8px 12px;
+    font-size: 14px;
+    z-index: 40;
+  }
+  
+  .room-wrapper {
+    height: 100vh;
+    width: 100%;
+    margin-top: 0;
+  }
+  
+  .fan-image {
+    max-width: 45% !important; /* Increased size for better visibility */
+    max-height: 35vh !important; /* Increased height */
+    /* Mobile specific adjustments for the fan image */
+    transform: translate(-50%, -50%) perspective(800px) rotateX(20deg) !important; /* Less extreme angle */
+    top: 15% !important; /* Fixed position on ceiling */
+    filter: drop-shadow(0 6px 10px rgba(0,0,0,0.5)) !important; /* Lighter shadow for mobile */
+  }
+}
