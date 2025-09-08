@@ -108,8 +108,8 @@ const Footer = ({ scrollToSection }) => {
             </p>
             <p className="text-sm mb-2">
               📞{" "}
-              <a href="tel:+919930101710" className="underline hover:text-[#ba6a5a]">
-                +91 9930101710
+              <a href="tel:+917400440127" className="underline hover:text-[#ba6a5a]">
+                +91 7400440127
               </a>
             </p>
             <p className="text-sm mb-4">

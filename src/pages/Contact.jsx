@@ -110,7 +110,7 @@ const Contact = () => {
               </div>
               <div className="flex items-center gap-3 hover:text-white transition">
                 <Phone className="text-[#e49385]" />
-                <a href="tel:+919930101710">+91 9930101710</a>
+                <a href="tel:+917400440127">+91 7400440127</a>
               </div>
               <div className="flex items-start gap-3 hover:text-white transition">
                 <MapPin className="text-[#ba6a5a] mt-1" />

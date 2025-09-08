@@ -164,7 +164,7 @@ const About = () => {
           <p className="text-gray-300 text-lg leading-relaxed">
             Design is not skin-deep. At Anthem, it moves air silently, saves energy intelligently, and enhances your space effortlessly.
           </p>
-          <span className="block bg-gradient-to-r from-[#e49385] to-[#d87c6a] bg-clip-text text-transparent mt-4 font-semibold text-lg">— Elone Musk</span>
+          <span className="block bg-gradient-to-r from-[#e49385] to-[#d87c6a] bg-clip-text text-transparent mt-4 font-semibold text-lg">— Paul Mathew</span>
         </div>
       </motion.div>
 
