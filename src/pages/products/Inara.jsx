@@ -386,7 +386,7 @@ const InaraFan = () => {
 
   if (!inaraData) {
     return (
-      <div className="bg-white text-black min-h-screen pt-24 pb-20 flex items-center justify-center">
+      <div className="bg-white text-black min-h-screen pt-20 pb-20 flex items-center justify-center">
         <div className="text-center">
           <h2 className="text-2xl font-bold text-[#ba6a5a] mb-4">Fan not found</h2>
           <p className="text-gray-600">The requested fan model could not be loaded.</p>
@@ -396,7 +396,7 @@ const InaraFan = () => {
   }
 
   return (
-    <div className="bg-white text-black min-h-screen pt-24 pb-20">
+    <div className="bg-white text-black min-h-screen pt-20 pb-20">
       <div className="w-full">
 
         {/* Fullscreen Image Viewer */}

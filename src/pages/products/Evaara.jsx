@@ -344,7 +344,7 @@ const EvaaraFan = () => {
   }
 
   return (
-    <div className="bg-white text-gray-800 min-h-screen pt-24 pb-20">
+    <div className="bg-white text-gray-800 min-h-screen pt-20 pb-20">
       <div className="w-full">
         {/* Fullscreen Image Viewer */}
         <AnimatePresence>
