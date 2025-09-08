@@ -8,7 +8,7 @@ const Inara = () => {
     <div
       className="bg-gradient-to-r from-[#85796B] to-[#F9E8CA] 
       bg-[length:200%_200%] animate-[gradient-move_8s_ease_infinite] 
-      text-black min-h-screen flex flex-col lg:flex-row items-center justify-center w-full overflow-hidden py-8 lg:py-16"
+      text-black min-h-screen flex flex-col lg:flex-row items-center justify-center w-full overflow-hidden  lg:py-16"
     >
       {/* Fan Image (Left Side on Desktop) */}
       <motion.div

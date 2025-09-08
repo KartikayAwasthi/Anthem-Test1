@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 const Lara = () => {
   return (
     <div className="bg-gradient-to-r from-[#85796B] to-[#F9E8CA] 
-  bg-[length:200%_200%] animate-[gradient-move_8s_ease_infinite] text-black min-h-screen flex flex-col lg:flex-row-reverse items-center justify-center w-full overflow-hidden py-8 lg:py-16">
+  bg-[length:200%_200%] animate-[gradient-move_8s_ease_infinite] text-black min-h-screen flex flex-col lg:flex-row-reverse items-center justify-center w-full overflow-hidden  lg:py-16">
       {/* Fan Image (Right Side) */}
       <motion.div
         className="w-full lg:w-[60%] flex items-center justify-center order-1 mb-6 lg:mb-0"
