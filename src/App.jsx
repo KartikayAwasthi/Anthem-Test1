@@ -14,6 +14,7 @@ const EvaaraProduct = lazy(() => import('./pages/products/Evaara'));
 const InaraProduct = lazy(() => import('./pages/products/Inara'));
 const SkyroProduct = lazy(() => import('./pages/products/Skyro'));
 const LaraProduct = lazy(() => import('./pages/products/Lara'));
+const TorinoProduct = lazy(() => import('./pages/products/Torino'));
 
 // Dummy cart page
 const Cart = () => <div className="min-h-screen pt-24 text-white bg-black flex items-center justify-center text-3xl">Shopping Cart</div>;
@@ -114,6 +115,11 @@ function App() {
           <Route path="/products/lara" element={
             <Suspense fallback={<div className="min-h-screen pt-24 text-white bg-black flex items-center justify-center">Loading...</div>}>
               <LaraProduct />
+            </Suspense>
+          } />
+          <Route path="/products/torino" element={
+            <Suspense fallback={<div className="min-h-screen pt-24 text-white bg-black flex items-center justify-center">Loading...</div>}>
+              <TorinoProduct />
             </Suspense>
           } />
           

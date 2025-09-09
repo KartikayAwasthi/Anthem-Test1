@@ -10,6 +10,7 @@ import Evaara from "../components/fans/Evaara";
 import Inara from "../components/fans/Inara";
 import Skyro from "../components/fans/Skyro";
 import Lara from "../components/fans/Lara";
+import Torino from "../components/fans/Torino";
 
 const MainLayout = ({ registerSection, scrollToSection }) => {
   const location = useLocation();
@@ -45,7 +46,11 @@ const MainLayout = ({ registerSection, scrollToSection }) => {
       <div ref={el => registerSection("lara", el)} id="lara">
         <Lara />
       </div>
-      
+
+      <div ref={el => registerSection("torino", el)} id="torino">
+        <Torino />
+      </div>
+
       {/* Other Sections */}
       <div ref={el => registerSection("about", el)} id="about">
         <About />
