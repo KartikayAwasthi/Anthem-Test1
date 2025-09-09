@@ -15,17 +15,12 @@ const ServicesGrid = () => {
 
   // Memoized service data to prevent recreation on each render
   const serviceData = useMemo(() => [
-    {
-      icon: <Wrench className="w-8 h-8" />,
-      title: "Professional Installation",
-      description: "Expert technicians ensure perfect setup with safety compliance and optimal performance testing.",
-      features: ["Free home visit", "Safety inspection", "Performance testing"]
-    },
+    
     {
       icon: <Headphones className="w-8 h-8" />,
       title: "24/7 Technical Support",
       description: "Round-the-clock assistance for troubleshooting, remote diagnostics, and technical queries.",
-      features: ["Remote diagnostics", "Live chat support", "Video assistance"]
+      features: ["Video Assistance", "Live chat support"]
     },
     {
       icon: <Shield className="w-8 h-8" />,

@@ -51,7 +51,7 @@ const Header = ({ activeSection, scrollToSection }) => {
     { name: "Support", id: "support" },
     { name: "Dealer", id: "dealer" },
     {
-      name: "Visualizer",
+      name: "Visual Experience",
       dropdown: [
         { name: "2D Room", path: "/visualizer/2d", isRoute: true },
         { name: "3D Room", path: "/visualizer/3d", isRoute: true },

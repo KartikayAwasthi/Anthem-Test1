@@ -9,6 +9,10 @@ const team2 = "/About/team2.png";
 const team3 = "/About/team3.jpg";
 const factory1 = "/About/factory1.jpg";
 const factory2 = "/About/factory2.jpg";
+const factory3 = "/About/factory3.jpg";
+const factory4 = "/About/factory4.jpg";
+const factory5 = "/About/factory5.jpg";
+const factory6 = "/About/factory6.jpg";
 const catalogPDF = "/About/anthem_catalog.pdf";
 
 const About = () => {
@@ -143,30 +147,42 @@ const About = () => {
             initial={{ opacity: 0, scale: 0.95 }}
             transition={{ duration: 0.6 }}
           />
+          <motion.img
+            src={factory3}
+            alt="New Factory"
+            className="rounded-2xl shadow-xl object-cover w-full h-72 hover:scale-105 transition-transform duration-500"
+            whileInView={{ opacity: 1, scale: 1 }}
+            initial={{ opacity: 0, scale: 0.95 }}
+            transition={{ duration: 0.6 }}
+          />
+          <motion.img
+            src={factory4}
+            alt="New Factory"
+            className="rounded-2xl shadow-xl object-cover w-full h-72 hover:scale-105 transition-transform duration-500"
+            whileInView={{ opacity: 1, scale: 1 }}
+            initial={{ opacity: 0, scale: 0.95 }}
+            transition={{ duration: 0.6 }}
+          />
+          <motion.img
+            src={factory5}
+            alt="New Factory"
+            className="rounded-2xl shadow-xl object-cover w-full h-72 hover:scale-105 transition-transform duration-500"
+            whileInView={{ opacity: 1, scale: 1 }}
+            initial={{ opacity: 0, scale: 0.95 }}
+            transition={{ duration: 0.6 }}
+          />
+          <motion.img
+            src={factory6}
+            alt="New Factory"
+            className="rounded-2xl shadow-xl object-cover w-full h-72 hover:scale-105 transition-transform duration-500"
+            whileInView={{ opacity: 1, scale: 1 }}
+            initial={{ opacity: 0, scale: 0.95 }}
+            transition={{ duration: 0.6 }}
+          />
         </div>
       </section>
 
-      {/* CEO Message */}
-      <motion.div
-        ref={ceoRef}
-        className="mt-28 px-4 md:px-12 text-center"
-        initial={{ opacity: 0, y: 30 }}
-        animate={inViewCeo ? { opacity: 1, y: 0 } : {}}
-        transition={{ duration: 1 }}
-      >
-        <h2 className="text-3xl font-bold mb-8">
-          <span className="text-white">From the </span>
-          <span className="bg-gradient-to-r from-[#e49385] to-[#d87c6a] bg-clip-text text-transparent">CEO</span>
-          <span className="text-white"> 💬</span>
-        </h2>
-        <div className="bg-[#111]/70 p-8 rounded-2xl shadow-lg backdrop-blur-md border border-white/10 max-w-3xl mx-auto hover:shadow-[0_0_40px_rgba(228,147,133,0.35)] transition-all">
-          <img src={ceoImg} alt="CEO" className="w-32 h-32 object-cover rounded-full shadow-lg mx-auto mb-6 border border-[#ba6a5a]/40" />
-          <p className="text-gray-300 text-lg leading-relaxed">
-            Design is not skin-deep. At Anthem, it moves air silently, saves energy intelligently, and enhances your space effortlessly.
-          </p>
-          <span className="block bg-gradient-to-r from-[#e49385] to-[#d87c6a] bg-clip-text text-transparent mt-4 font-semibold text-lg">— Paul Mathew</span>
-        </div>
-      </motion.div>
+      
 
      
 

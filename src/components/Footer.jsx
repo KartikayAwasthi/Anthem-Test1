@@ -55,7 +55,7 @@ const Footer = ({ scrollToSection }) => {
               </a>
             )}
             <p className="text-sm text-white/80">
-              Crafting elegance with every rotation. Premium fans for modern homes.
+             Where premium meets possible.
             </p>
           </div>
 

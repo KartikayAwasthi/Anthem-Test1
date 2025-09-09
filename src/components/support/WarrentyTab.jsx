@@ -4,25 +4,19 @@ import { Star } from "lucide-react";
 
 const WarrantyTab = () => {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
       {[
         { 
           type: "Induction Motor", 
           period: "2 Years", 
           icon: "⚙️", 
-          features: ["Motor replacement", "Electrical components", "Manufacturing defects"] 
+          features: ["Motor replacement", "Manufacturing defects"] 
         },
         { 
           type: "BLDC Motor", 
           period: "5 Years", 
           icon: "⚡", 
           features: ["Motor replacement", "PCB coverage", "Energy efficiency guarantee"] 
-        },
-        { 
-          type: "General Components", 
-          period: "2 Years", 
-          icon: "🔧", 
-          features: ["Blade replacement", "Light fixtures", "Remote control"] 
         }
       ].map((warranty, index) => (
         <motion.div 

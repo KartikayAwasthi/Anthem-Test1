@@ -51,7 +51,7 @@ const Evaara = () => {
               ✓
             </span>
             <span className="text-green-500 font-semibold text-base sm:text-lg">
-              BLDC Motor
+              Powered by BLDC Technology
             </span>
           </div>
 
