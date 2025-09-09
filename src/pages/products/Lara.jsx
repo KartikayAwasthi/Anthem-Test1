@@ -7,12 +7,32 @@ import CartButton from '../../components/CartButton';
 
 const laraImg1 = "/fan 3d/lara/brown/1.webp";
 
-// Brown color images - 3 different views
+
+// Amber color images
+const laraAmberImages = [
+  "/fan 3d/lara/Amber/1.webp",
+  
+];
+
+// Brown color images
 const laraBrownImages = [
   "/fan 3d/lara/brown/1.webp",
   "/fan 3d/lara/brown/2.webp",
   "/fan 3d/lara/brown/3.webp"
 ];
+
+// Ivory color images
+const laraIvoryImages = [
+  "/fan 3d/lara/Ivory/1.webp",
+ 
+];
+
+// White color images
+const laraWhiteImages = [
+  "/fan 3d/lara/White/1.webp",
+ 
+];
+
 
 const laraCreatives = [
   "/lara-creatives/8l.jpg",
@@ -55,9 +75,27 @@ const laraData = {
   colors: [
     { 
       name: "Light Brown", 
-      image: laraImg1, 
+      image: laraBrownImages[0], 
       code: "#8B4513",
       images: laraBrownImages
+    },
+    { 
+      name: "Amber", 
+      image: laraAmberImages[0], 
+      code: "#FFBF00",
+      images: laraAmberImages
+    },
+    { 
+      name: "Ivory", 
+      image: laraIvoryImages[0], 
+      code: "#FFFFF0",
+      images: laraIvoryImages
+    },
+    { 
+      name: "White", 
+      image: laraWhiteImages[0], 
+      code: "#FFFFFF",
+      images: laraWhiteImages
     }
   ],
   itemDetails: {
@@ -775,7 +813,7 @@ const LaraFan = () => {
   </motion.div>
 )}
 
-        )}
+        
       </div>
     </div>
   );

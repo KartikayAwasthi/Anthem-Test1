@@ -92,7 +92,7 @@ const Header = ({ activeSection, scrollToSection }) => {
         {isVisualizerPage || isProductPage ? (
           <Link to="/" className="flex items-center gap-2">
             <img
-              src="/logo/logo-white.png"
+              src="/logo/logo-white.webp"
               alt="Anthem Logo"
               className="h-10 w-auto"
             />
@@ -104,7 +104,7 @@ const Header = ({ activeSection, scrollToSection }) => {
             className="flex items-center gap-2"
           >
             <img
-              src="/logo/logo-white.png"
+              src="/logo/logo-white.webp"
               alt="Anthem Logo"
               className="h-10 w-auto"
             />

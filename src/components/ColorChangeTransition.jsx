@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
-const anthemLogo = '/logo/logo-white.png';
+const anthemLogo = '/logo/logo-white.webp';
 
 const ColorChangeTransition = ({ isVisible, onComplete, type = 'fan', localized = false }) => {
   // Handle completion callback

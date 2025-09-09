@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { Facebook, Instagram, Linkedin } from "lucide-react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 
-const anthemLogo = "/logo/logo-white.png";
+const anthemLogo = "/logo/logo-white.webp";
 
 const Footer = ({ scrollToSection }) => {
   const location = useLocation();
