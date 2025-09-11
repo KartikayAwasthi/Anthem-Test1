@@ -65,29 +65,30 @@ const About = () => {
           {[
             {
               year: "1991",
-              text: "Started as an OEM supplier during India's liberalization era.",
+              text: "Our journey began , a pivotal time for India's economic growth with implementation of liberalization policies.Initially stated as an OEM for India's No.1 fan brand.",
               status: "done",
             },
             {
-              year: "2010",
-              text: "Opened a modern integrated factory in Goa with in-house painting, winding, and testing.",
+              year: "2001",
+              text: "We gradually expanded our expertise into manufacturing.Our humble beginnings were focused primarily on technical services and troubleshooting for the electrical fans and home appliances sector.",
               status: "done",
             },
             {
-              year: "2024",
-              text: "Exporting to UAE, Iraq, Oman, Nepal, Bahrain, and parts of Africa.",
+              year: "2011",
+              text: "As our knowledge and expertise in product building grew, we ventured into manufacturing, leading to the establishment of our own production setup.",
               status: "done",
             },
             {
+              year: "2021",
+              text: "With a focus on backward integration, our manufacturing facility encompasses both component production and finished goods.",
+              status: "done",
+            },
+             {
               year: "2025",
-              text: "Expanding production capacity with automation and AI-based testing.",
+              text: "Today, we are exporting fans and appliances to UAE,Iraq,Sri Lanka, Nepal,Oman, Baharain and parts of Africa.We feature a comprehensive setup that includes winding, powder coating, painting processes, seamlessly integrating with our advance assembly operations to produce robust,high-quality products.",
               status: "upcoming",
             },
-            {
-              year: "2030",
-              text: "Becoming a leading global supplier with presence in 30+ countries.",
-              status: "upcoming",
-            },
+           
           ].map((milestone, index) => (
             <motion.div
               key={index}
