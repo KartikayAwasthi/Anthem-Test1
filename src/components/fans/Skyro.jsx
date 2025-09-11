@@ -6,8 +6,8 @@ import { Link } from "react-router-dom";
 const Skyro = () => {
   return (
     <div
-      className="bg-gradient-to-r from-[#85796B] to-[#F9E8CA] 
-      bg-[length:200%_200%] animate-[gradient-move_8s_ease_infinite] 
+      className="bg-[#F9E8CA] 
+      
       text-black min-h-screen flex flex-col lg:flex-row items-center justify-center w-full overflow-hidden  lg:py-16"
     >
       {/* Content Section (Left side) */}

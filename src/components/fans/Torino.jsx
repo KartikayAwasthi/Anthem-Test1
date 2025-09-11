@@ -5,8 +5,8 @@ import { Link } from "react-router-dom";
 
 const Evaara = () => {
   return (
-    <div className="bg-gradient-to-r from-[#85796B] to-[#F9E8CA] 
-  bg-[length:200%_200%] animate-[gradient-move_8s_ease_infinite] text-black min-h-screen flex flex-col lg:flex-row items-center justify-center w-full overflow-hidden  lg:py-16">
+    <div className="bg-[#F9E8CA] 
+  text-black min-h-screen flex flex-col lg:flex-row items-center justify-center w-full overflow-hidden  lg:py-16">
       {/* Fan Image */}
       <motion.div
         className="w-full lg:w-[60%] flex items-center justify-center order-1 mb-6 lg:mb-0"
@@ -51,7 +51,7 @@ const Evaara = () => {
               ✓
             </span>
             <span className="text-green-500 font-semibold text-base sm:text-lg">
-              Powered by BLDC Technology
+              BLDC Motor
             </span>
           </div>
 

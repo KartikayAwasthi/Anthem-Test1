@@ -79,7 +79,7 @@ const torinoData = {
       image: torinoImg2, 
       code: "#FFFFFF",
       folder: "white",
-      images3d: ["/Pedestal Fans/Torino/T-White/1.webp", "/Pedestal Fans/Torino/T-White/2.webp", "/Pedestal Fans/Torino/T-White/3.webp"]
+      images3d: ["/Pedestal Fans/Torino/T-White/1.webp"]
     }
   ],
   itemDetails: {
@@ -348,7 +348,7 @@ const TorinoFan = () => {
 
               {/* Image */}
               <motion.div
-                className="relative flex items-center justify-center w-full height-full p-8"
+                className="relative flex items-center justify-center w-full height-full p-8 "
                 onClick={(e) => e.stopPropagation()}
               >
                 <motion.div
