@@ -31,20 +31,21 @@ const Header = ({ activeSection, scrollToSection }) => {
           image: "/fan 3d/Evaara/brown-1/1.webp",
         },
         {
+          name: "Skyro",
+          id: "skyro",
+          image: "/fan 3d/Skyro/white-gold/1.webp",
+        },
+          {
           name: "Inara",
           id: "inara",
           image: "/fan 3d/Inaara/Blue/1.webp",
         },
         {
-          name: "Skyro",
-          id: "skyro",
-          image: "/fan 3d/Skyro/white-gold/1.webp",
-        },
-        {
-          name: "Lara",
+          name: "Lara DX",
           id: "lara",
           image: "/fan 3d/lara/brown/1.webp",
         },
+        { name: "Torino", id: "torino", image: "/Pedestal Fans/Torino/T-Black/1.webp" }
       ],
     },
     { name: "About", id: "about" },

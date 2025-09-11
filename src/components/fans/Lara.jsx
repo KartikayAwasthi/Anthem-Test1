@@ -30,7 +30,7 @@ const Lara = () => {
         transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
       >
         {/* Fan Name */}
-        <h1 className="text-3xl sm:text-5xl md:text-6xl font-bold">Lara</h1>
+        <h1 className="text-3xl sm:text-5xl md:text-6xl font-bold">Lara DX</h1>
 
         {/* Tagline */}
         <p className="text-base sm:text-xl md:text-2xl text-[#c0442b] font-medium italic animate-pulse">

@@ -40,7 +40,7 @@ const laraCreatives = [
 ];
 
 const laraData = {
-  name: "LARA",
+  name: "LARA DX",
   image: laraImg1,
   motorTypes: {
     bldc: {
