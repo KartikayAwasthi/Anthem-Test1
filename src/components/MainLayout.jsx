@@ -11,6 +11,7 @@ import Inara from "../components/fans/Inara";
 import Skyro from "../components/fans/Skyro";
 import Lara from "../components/fans/Lara";
 import Torino from "../components/fans/Torino";
+import WhyAnthem from "../components/WhyAnthem";
 
 const MainLayout = ({ registerSection, scrollToSection }) => {
   const location = useLocation();
@@ -52,6 +53,9 @@ const MainLayout = ({ registerSection, scrollToSection }) => {
       </div>
 
       {/* Other Sections */}
+      <div ref ={el => registerSection("WhyAnthem", el)} id="WhyAnthem">
+        <WhyAnthem />
+      </div>
       <div ref={el => registerSection("about", el)} id="about">
         <About />
       </div>
