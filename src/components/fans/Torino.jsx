@@ -43,20 +43,20 @@ const Evaara = () => {
 
         </p>
 
-       {/* Motor Types */}
+        {/* Motor Types */}
         <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 items-center sm:items-start">
           {/* BLDC Motor */}
-          <div className="flex items-center gap-2">
-            <span className="w-6 h-6 flex items-center justify-center rounded-full bg-green-500 text-white text-sm font-bold shadow-md animate-pulse">
-              ✓
-            </span>
-            <span className="text-green-500 font-semibold text-base sm:text-lg">
-              BLDC Motor
-            </span>
-          </div>
+         <div className="flex items-center gap-2">
+  <img 
+    src="/bldcgreen1.webp" 
+    alt="Fan Icon"
+    className="w-30 h-30 rounded-md object-contain"
+  />
+</div>
 
           
         </div>
+
 
         {/* CTA Button */}
         <Link

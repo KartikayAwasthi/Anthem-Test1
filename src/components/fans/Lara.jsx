@@ -43,28 +43,20 @@ const Lara = () => {
           and smooth operation. A perfect fit for contemporary spaces.
         </p>
 
-        {/* Motor Types */}
-        <div className="flex flex-col sm:flex-row gap-3 sm:gap-6 items-center sm:items-start">
+         {/* Motor Types */}
+        <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 items-center sm:items-start">
           {/* BLDC Motor */}
-          <div className="flex items-center gap-2">
-            <span className="w-5 h-5 sm:w-6 sm:h-6 flex items-center justify-center rounded-full bg-green-500 text-white text-xs sm:text-sm font-bold shadow-md animate-pulse">
-              ✓
-            </span>
-            <span className="text-green-400 font-semibold text-sm sm:text-lg">
-              BLDC Motor
-            </span>
-          </div>
+         <div className="flex items-center gap-2">
+  <img 
+    src="/bldcgreen1.webp" 
+    alt="Fan Icon"
+    className="w-30 h-30 rounded-md object-contain"
+  />
+</div>
 
-          {/* Induction Motor */}
-          <div className="flex items-center gap-2">
-            <span className="w-5 h-5 sm:w-6 sm:h-6 flex items-center justify-center rounded-full bg-blue-500 text-white text-xs sm:text-sm font-bold shadow-md animate-pulse">
-              ✓
-            </span>
-            <span className="text-blue-400 font-semibold text-sm sm:text-lg">
-              Induction Motor
-            </span>
-          </div>
+          
         </div>
+
 
         {/* CTA Button */}
         <Link

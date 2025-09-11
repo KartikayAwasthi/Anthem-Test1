@@ -36,27 +36,23 @@ const Skyro = () => {
         </p>
 
         {/* Motor Types */}
-        <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 items-center sm:items-start">
-          {/* BLDC Motor */}
-          <div className="flex items-center gap-2">
-            <span className="w-6 h-6 flex items-center justify-center rounded-full bg-green-500 text-white text-sm font-bold shadow-md animate-pulse">
-              ✓
-            </span>
-            <span className="text-green-400 font-semibold text-base sm:text-lg">
-              BLDC Motor
-            </span>
-          </div>
+<div className="flex items-center gap-6">
+  {/* BLDC Motor */}
+  <img 
+    src="/bldcgreen1.webp" 
+    alt="BLDC Motor"
+    className="w-30 h-30 object-contain"  // bigger image (96px)
+  />
 
-          {/* Induction Motor */}
-          <div className="flex items-center gap-2">
-            <span className="w-6 h-6 flex items-center justify-center rounded-full bg-blue-500 text-white text-sm font-bold shadow-md animate-pulse">
+  {/* Induction Motor */}
+   <span className="w-5 h-5 sm:w-6 sm:h-6 flex items-center justify-center rounded-full bg-blue-500 text-white text-xs sm:text-sm font-bold shadow-md animate-pulse">
               ✓
             </span>
-            <span className="text-blue-400 font-semibold text-base sm:text-lg">
+            <span className="text-blue-400 font-semibold text-sm sm:text-2xl">
               Induction Motor
             </span>
-          </div>
-        </div>
+</div>
+
 
         {/* CTA Button */}
         <Link
