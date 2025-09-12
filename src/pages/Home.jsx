@@ -6,7 +6,7 @@ const Home = () => {
       {/* Video Background */}
       <div className="relative w-full h-screen overflow-hidden bg-black">
       <video
-  src="/Anthem-Fan-video.mov"
+  src="/Anthem-Fan-video.webm"
   autoPlay
   loop
   muted
